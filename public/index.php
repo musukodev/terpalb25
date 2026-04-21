@@ -5,9 +5,6 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
-// Set local temp directory to avoid open_basedir /tmp restrictions
-putenv('TMPDIR=' . __DIR__ . '/../storage/framework/cache/tmp');
-
 // Determine if the application is in maintenance mode...
 if (file_exists($maintenance = __DIR__ . '/../storage/framework/maintenance.php')) {
     require $maintenance;
